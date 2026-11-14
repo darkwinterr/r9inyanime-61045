@@ -1,0 +1,32 @@
+headers = []
+redirects = []
+
+[functions]
+
+[functions."*"]
+
+[[plugins]]
+origin = "default"
+package = "@netlify/plugin-nextjs"
+
+[plugins.inputs]
+
+[build]
+publish = "/opt/build/repo/frontend/.next"
+publishOrigin = "ui"
+commandOrigin = "config"
+command = "npx -y yarn@1.22.22 install --non-interactive && npx turbo run build --filter @animeflix/frontend"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]
