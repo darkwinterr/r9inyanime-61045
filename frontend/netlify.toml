@@ -1,0 +1,4 @@
+[build]
+  # Make yarn available on PATH (turbo needs it to detect the package manager),
+  # install workspace dependencies (near no-op when already installed), then build.
+  command = "npx -y -p yarn@1.22.22 -c 'yarn install --non-interactive && yarn turbo run build --filter @animeflix/frontend'"
